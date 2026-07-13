@@ -1,0 +1,16 @@
+{
+  "name": "image-gallery-server",
+  "version": "1.0.0",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.3"
+  },
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.mjs"
+  }
+}
+

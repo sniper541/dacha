@@ -1,0 +1,16 @@
+node_modules/
+site/node_modules/
+
+.env
+.env.*
+
+*.log
+
+.idea/
+.vscode/
+
+__pycache__/
+*.pyc
+
+.DS_Store
+Thumbs.db
