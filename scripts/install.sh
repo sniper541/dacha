@@ -2,12 +2,13 @@
 set -Eeuo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DOMAIN="dacha.sniper541.ru"
+DOMAIN="dacha.sniper541.com"
+NGINX_FILE="dacha.sniper541.ru"
 
 SITE_DIR="$PROJECT_DIR/site"
-NGINX_SOURCE="$PROJECT_DIR/nginx/$DOMAIN"
-NGINX_AVAILABLE="/etc/nginx/sites-available/$DOMAIN"
-NGINX_ENABLED="/etc/nginx/sites-enabled/$DOMAIN"
+NGINX_SOURCE="$PROJECT_DIR/nginx/$NGINX_FILE"
+NGINX_AVAILABLE="/etc/nginx/sites-available/$NGINX_FILE"
+NGINX_ENABLED="/etc/nginx/sites-enabled/$NGINX_FILE"
 
 if [[ "$EUID" -ne 0 ]]; then
     echo "Ошибка: запусти скрипт от root или через sudo."

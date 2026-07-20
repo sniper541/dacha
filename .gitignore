@@ -14,3 +14,16 @@ __pycache__/
 
 .DS_Store
 Thumbs.db
+!.env.example
+bot/.env
+bot/.env.*
+!bot/.env.example
+users.json
+site/json/users.json
+logs/
+log/
+backup/
+backups/
+*.bak
+*.tmp
+*~

@@ -2,7 +2,7 @@
 
 Сайт гостевых домиков «Любимая дача» в Адыгее.
 
-Сайт: https://dacha.sniper541.ru
+Сайт: https://dacha.sniper541.com
 
 ![Главная страница](docs/screenshot.png)
 
@@ -33,7 +33,7 @@
     │   ├── package.json
     │   └── package-lock.json
     ├── nginx/
-    │   └── dacha.sniper541.ru       # конфигурация nginx
+    │   └── dacha.sniper541.com       # конфигурация nginx
     ├── scripts/
     │   └── install.sh               # установка проекта
     ├── docs/
