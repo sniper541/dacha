@@ -4,37 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Любимая дача</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=8">
     <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preload" as="image" href="img/TERRITORY/5 (2).webp" fetchpriority="high">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="container">
             <div class="left-header-group">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                        </div>
-                    </label>
-                </div>
-                <div class="logo">
-                    <i class="fas fa-home"></i>
-                    <span>Любимая дача</span>
-                </div>
+                <a class="logo" href="#top" aria-label="Любимая дача">
+                    <span class="logo-text">Любимая дача</span>
+                    <small>гостевые домики в Адыгее</small>
+                </a>
             </div>
             <nav id="main-nav">
                 <a href="#domiki">Домики</a>
                 <a href="#territory">Территория</a>
                 <a href="#kitchen">Кухня</a>
                 <a href="#banya">Баня</a>
-                <a href="#uslugi">Услуги</a>
-                <a href="#contacts">Контакты</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacts" class="nav-cta">Забронировать</a>
             </nav>
-            <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-menu" id="hamburger-menu" aria-label="Открыть меню">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -42,54 +35,92 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="swiper hero-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('img/TERRITORY/5 (2).webp');">
-                    <div class="hero-content">
-                        <h1>Любимая дача</h1>
-                        <p>Уютные домики в Адыгее с баней и кухней</p>
-                        <div class="hero-badges">
-                            <span>⭐ 5,0 рейтинг на Авито</span>
-                            <span>81 отзыв реальных гостей</span>
-                        </div>
-                        <div class="hero-actions">
-                            <a href="https://wa.me/79133918093" class="btn" target="_blank" rel="noopener noreferrer">
-                                Забронировать в WhatsApp
-                            </a>
-                            <a href="#domiki" class="btn btn-secondary">Посмотреть домики</a>
-                        </div>
-                    </div>
+    <section class="hero" id="top">
+        <div class="hero-shell">
+            <div class="hero-media" aria-hidden="true"></div>
+            <div class="hero-copy">
+                <span class="hero-kicker">Каменномостский, Адыгея</span>
+                <h1>Гостевые домики для спокойного отдыха в Адыгее</h1>
+                <p>Два уютных домика у гор, баня на дровах, кухня, мангал и зеленая территория для отдыха без городской суеты.</p>
+                <div class="hero-badges">
+                    <span>5,0 на Авито</span>
+                    <span>81 отзыв</span>
+                    <span>Баня и кухня</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="https://wa.me/79133918093" class="btn" target="_blank" rel="noopener noreferrer">Забронировать в WhatsApp</a>
+                    <a href="#domiki" class="btn btn-secondary">Смотреть домики</a>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <aside class="hero-booking" aria-label="Краткая информация">
+                <div class="booking-top">
+                    <span>Стоимость</span>
+                    <strong>от 5000₽</strong>
+                    <small>за ночь</small>
+                </div>
+                <div class="booking-grid">
+                    <div><strong>2</strong><span>домика</span></div>
+                    <div><strong>5,0</strong><span>рейтинг</span></div>
+                    <div><strong>81</strong><span>отзыв</span></div>
+                </div>
+                <a href="#contacts" class="booking-link">Уточнить свободные даты</a>
+            </aside>
+        </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Преимущества">
+        <div class="container">
+            <div><strong>Горы рядом</strong><span>Каменномостский, Адыгея</span></div>
+            <div><strong>Чистые домики</strong><span>уют, дерево и тишина</span></div>
+            <div><strong>Отзывы гостей</strong><span>реальные оценки с Авито</span></div>
+            <div><strong>Быстрая связь</strong><span>бронирование в WhatsApp</span></div>
+        </div>
+    </section>
+
+    <section class="guest-info" aria-label="Информация для гостей">
+        <div class="container">
+            <div class="guest-info-card">
+                <span>Заезд</span>
+                <strong>14:00</strong>
+                <p>Можно уточнить ранний заезд при бронировании.</p>
+            </div>
+            <div class="guest-info-card">
+                <span>Выезд</span>
+                <strong>11:00</strong>
+                <p>Спокойно собраться утром и передать домик.</p>
+            </div>
+            <div class="guest-info-card">
+                <span>Бронирование</span>
+                <strong>WhatsApp</strong>
+                <p>Напишите даты, количество гостей и желаемый домик.</p>
+            </div>
         </div>
     </section>
 
     <section id="domiki" class="domiki">
-        <h2>Наши Уютные Домики</h2>
+        <div class="section-head"><span>Проживание</span><h2>Домики для отдыха</h2><p>Выберите формат: оба домика с отдельной атмосферой, баней, кухней и местом для вечернего отдыха.</p></div>
         <div class="cards">
             <div class="card">
                 <div class="swiper house-swiper">
                     <div class="swiper-wrapper">
                         <!-- Поставили 5-е фото первым -->
-                        <div class="swiper-slide"><img src="img/DOM1/2 (5).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (1).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (2).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (3).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (4).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (6).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (7).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (8).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (9).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (10).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (11).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (12).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (13).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (14).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (15).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (16).webp" alt="Дом 1" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM1/2 (17).webp" alt="Дом 1" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (5).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (1).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (2).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (3).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (4).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (6).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (7).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (8).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (9).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (10).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (11).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (12).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (13).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (14).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (15).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (16).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM1/2 (17).webp" alt="Дом 1" loading="lazy" decoding="async"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
@@ -103,32 +134,32 @@
             <div class="card">
                 <div class="swiper house-swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/DOM2/3 (1).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (2).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (3).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (4).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (5).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (6).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (7).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (8).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (9).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (10).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (11).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (12).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (13).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (14).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (15).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (16).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (17).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (18).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (19).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (20).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (21).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (22).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (23).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (24).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (25).webp" alt="Дом 2" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="img/DOM2/3 (26).webp" alt="Дом 2" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (1).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (2).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (3).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (4).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (5).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (6).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (7).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (8).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (9).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (10).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (11).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (12).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (13).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (14).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (15).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (16).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (17).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (18).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (19).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (20).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (21).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (22).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (23).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (24).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (25).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
+                        <div class="swiper-slide"><img src="img/DOM2/3 (26).webp" alt="Дом 2" loading="lazy" decoding="async"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
@@ -143,83 +174,83 @@
     </section>
 
     <section id="territory" class="territory">
-        <h2>Наша Территория</h2>
+        <div class="section-head"><span>Территория</span><h2>Зеленый двор у гор</h2><p>Ухоженное пространство для прогулок, фотографий, завтраков на воздухе и спокойных вечеров.</p></div>
         <div class="swiper territory-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (1).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (2).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (3).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (4).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (5).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (6).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (7).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (8).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (9).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (10).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (11).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (12).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (13).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (14).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (15).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (16).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (17).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (18).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (19).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (20).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (21).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (22).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (23).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (24).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (25).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (26).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (27).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (28).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (29).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (30).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (31).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (32).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (33).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (34).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (35).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (36).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (37).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (38).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (39).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (40).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (41).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (42).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (43).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (44).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (45).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (46).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (47).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (48).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (49).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (50).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (51).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (52).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (53).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (54).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (55).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (56).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (57).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (58).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (59).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (60).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (61).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (62).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (63).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (64).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (65).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (66).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (67).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (68).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (69).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (70).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (71).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (72).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (73).webp" alt="Территория" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/TERRITORY/5 (74).webp" alt="Территория" loading="lazy"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (1).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (2).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (3).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (4).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (5).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (6).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (7).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (8).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (9).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (10).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (11).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (12).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (13).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (14).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (15).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (16).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (17).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (18).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (19).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (20).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (21).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (22).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (23).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (24).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (25).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (26).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (27).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (28).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (29).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (30).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (31).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (32).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (33).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (34).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (35).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (36).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (37).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (38).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (39).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (40).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (41).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (42).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (43).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (44).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (45).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (46).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (47).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (48).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (49).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (50).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (51).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (52).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (53).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (54).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (55).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (56).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (57).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (58).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (59).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (60).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (61).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (62).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (63).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (64).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (65).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (66).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (67).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (68).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (69).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (70).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (71).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (72).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (73).webp" alt="Территория" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/TERRITORY/5 (74).webp" alt="Территория" loading="lazy" decoding="async"></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
@@ -228,30 +259,30 @@
     </section>
 
     <section id="kitchen" class="kitchen">
-        <h2>Наша Кухня</h2>
+        <div class="section-head"><span>Еда</span><h2>Кухня для своих ужинов</h2><p>Готовьте сами или договоритесь о домашнем питании, чтобы отдых оставался легким.</p></div>
         <div class="swiper kitchen-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (1).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (2).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (3).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (4).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (5).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (6).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (7).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (8).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (9).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (10).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (11).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (12).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (13).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (14).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (15).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (16).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (17).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (18).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (19).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (20).webp" alt="Кухня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/KUKHNYA/4 (21).webp" alt="Кухня" loading="lazy"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (1).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (2).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (3).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (4).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (5).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (6).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (7).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (8).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (9).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (10).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (11).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (12).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (13).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (14).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (15).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (16).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (17).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (18).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (19).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (20).webp" alt="Кухня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/KUKHNYA/4 (21).webp" alt="Кухня" loading="lazy" decoding="async"></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
@@ -263,24 +294,24 @@
     </section>
 
     <section id="banya" class="banya">
-        <h2>Русская Баня</h2>
+        <div class="section-head"><span>Релакс</span><h2>Баня на дровах</h2><p>Теплая баня, отдых после прогулок и вечер без городской спешки.</p></div>
         <div class="swiper banya-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/BANYA/1 (1).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (2).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (3).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (4).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (5).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (6).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (7).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (8).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (9).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/1 (10).webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_14_57_IMG_2047.webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_14_58_IMG_2050.webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_14_59_IMG_2054.webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_15_00_IMG_2061.webp" alt="Баня" loading="lazy"></div>
-                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_15_02_IMG_2070.webp" alt="Баня" loading="lazy"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (2).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (1).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (3).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (4).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (5).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (6).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (7).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (8).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (9).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/1 (10).webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_14_57_IMG_2047.webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_14_58_IMG_2050.webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_14_59_IMG_2054.webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_15_00_IMG_2061.webp" alt="Баня" loading="lazy" decoding="async"></div>
+                <div class="swiper-slide"><img src="img/BANYA/2025_05_27_15_02_IMG_2070.webp" alt="Баня" loading="lazy" decoding="async"></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
@@ -292,7 +323,7 @@
     </section>
 
     <section id="uslugi" class="uslugi">
-        <h2>Дополнительные Услуги</h2>
+        <div class="section-head"><span>Сервис</span><h2>Все нужное для отдыха</h2><p>Еда, баня и быстрые договоренности без лишней переписки.</p></div>
         <div class="cards">
             <div class="card mini">
                 <h3>🍳 Завтрак</h3>
@@ -314,7 +345,7 @@
     </section>
 
     <section id="reviews" class="reviews">
-        <h2>Отзывы наших гостей</h2>
+        <div class="section-head"><span>Отзывы</span><h2>Гости возвращаются</h2><p>Собрали реальные впечатления гостей, которые уже отдыхали в домиках.</p></div>
         <div class="swiper reviews-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -505,8 +536,35 @@
         </p>
     </section>
 
+
+    <section id="faq" class="faq">
+        <div class="section-head">
+            <span>Важно знать</span>
+            <h2>Частые вопросы</h2>
+            <p>Коротко о том, что обычно уточняют перед бронированием.</p>
+        </div>
+        <div class="faq-grid">
+            <article>
+                <h3>Как забронировать?</h3>
+                <p>Напишите в WhatsApp даты поездки и количество гостей. Мы ответим по свободным датам и условиям.</p>
+            </article>
+            <article>
+                <h3>Есть ли кухня?</h3>
+                <p>Да, есть оборудованная кухня, мангал и возможность договориться о домашнем питании.</p>
+            </article>
+            <article>
+                <h3>Баня оплачивается отдельно?</h3>
+                <p>Баню лучше согласовать заранее при бронировании, чтобы подготовить удобное время.</p>
+            </article>
+            <article>
+                <h3>Где находится дача?</h3>
+                <p>Адыгея, Майкопский район, Каменномостский, ул. Крылова, 10.</p>
+            </article>
+        </div>
+    </section>
+
     <section id="contacts" class="contacts">
-        <h2>Бронирование и Контакты</h2>
+        <div class="section-head"><span>Контакты</span><h2>Забронировать дату</h2><p>Напишите в WhatsApp: подскажем свободные даты, условия и поможем выбрать домик.</p></div>
         <div class="contact-info">
             <p>📞 +7 (913) 391-80-93</p>
             <p>📧 popova541@mail.ru</p>
@@ -516,7 +574,7 @@
     </section>
 
     <footer>
-        <p>© 2025 Любимая дача. Все права защищены.</p>
+        <p>© <span id="current-year">2026</span> Любимая дача. Все права защищены.</p>
     </footer>
 
     <div id="fullscreen-overlay" class="fullscreen-overlay">
@@ -533,7 +591,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/theme.js"></script>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top">
@@ -548,7 +605,8 @@
             <a href="#kitchen">Кухня</a>
             <a href="#banya">Баня</a>
             <a href="#uslugi">Услуги</a>
-            <a href="#contacts">Контакты</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contacts">Контакты</a><a href="https://wa.me/79133918093" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </nav>
     </div>
 </body>
